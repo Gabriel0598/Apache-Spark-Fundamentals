@@ -11,7 +11,7 @@ object ScalaRecap extends App
   val anIfExpression = if (2 > 3) "bigger" else "smaller"
 
   //instructions vs expressions
-  val theUnit = println("Hello, Scala") //Unit = "no meaningful value" = void in other languages
+  val theUnit: Unit = println("Hello, Scala") //Unit = "no meaningful value" = void in other languages
 
   //functions
   def myFunction(x: Int) = 42
@@ -118,16 +118,16 @@ object ScalaRecap extends App
 
   //auto-injection by the compiler
   def methodWithImplicitArgument(implicit x: Int) = x + 43
-  implicit val implicitInt = 67
+  implicit val implicitInt: Int = 67
 
   val implicitCall = methodWithImplicitArgument
 
   //implicit conversions - implicit defs
   case class Person(name: String)
   {
-    def greet = println(s"Hi, my name is $name")
+    def greet: Unit = println(s"Hi, my name is $name")
   }
-  implicit def fromStringToPerson(name: String) = Person(name)
+  implicit def fromStringToPerson(name: String): Person = Person(name)
   "Bob".greet // fromStringToPerson("Bob").greet
 
   //implicit conversion - implicit classes
