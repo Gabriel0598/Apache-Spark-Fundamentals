@@ -120,7 +120,7 @@
 {"Name":"ford pinto", "Miles_per_Gallon":19, "Cylinders":4, "Displacement":122, "Horsepower":85, "Weight_in_lbs":2310, "Acceleration":18.5, "Year":"1973-01-01", "Origin":"USA"}
 {"Name":"mercury capri v6", "Miles_per_Gallon":21, "Cylinders":6, "Displacement":155, "Horsepower":107, "Weight_in_lbs":2472, "Acceleration":14, "Year":"1973-01-01", "Origin":"USA"}
 {"Name":"fiat 124 sport coupe", "Miles_per_Gallon":26, "Cylinders":4, "Displacement":98, "Horsepower":90, "Weight_in_lbs":2265, "Acceleration":15.5, "Year":"1973-01-01", "Origin":"Europe"}
-{"Name":"chevrolet monte carlo s", "Miles_per_Gallon":15, "Cylinders":8, "Displacement":350, "Horsepower":145, "Weight_in_lbs":4082, "Acceleration":13, "Year":"1973-01-01", "Origin":"USA"}
+{"Name":"chevrolet monte carlo s", "Miles_per_Gallon":"unknown", "Cylinders":8, "Displacement":350, "Horsepower":145, "Weight_in_lbs":4082, "Acceleration":13, "Year":"1973-01-01", "Origin":"USA"}
 {"Name":"pontiac grand prix", "Miles_per_Gallon":16, "Cylinders":8, "Displacement":400, "Horsepower":230, "Weight_in_lbs":4278, "Acceleration":9.5, "Year":"1973-01-01", "Origin":"USA"}
 {"Name":"fiat 128", "Miles_per_Gallon":29, "Cylinders":4, "Displacement":68, "Horsepower":49, "Weight_in_lbs":1867, "Acceleration":19.5, "Year":"1973-01-01", "Origin":"Europe"}
 {"Name":"opel manta", "Miles_per_Gallon":24, "Cylinders":4, "Displacement":116, "Horsepower":75, "Weight_in_lbs":2158, "Acceleration":15.5, "Year":"1973-01-01", "Origin":"Europe"}
