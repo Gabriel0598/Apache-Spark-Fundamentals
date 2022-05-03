@@ -100,5 +100,48 @@ object DataSources extends App
   spark.read.text("src/main/resources/data/sampleTextFile.txt").show()
 
   //Reading from a remote DB
+  val driver = "org.postgresql.Driver"
+  val url = "jdbc:postgresql://localhost:5432/rtvim"
+  val user = "docker"
+  val password = "docker"
 
+  val employeesDF = spark.read
+    .format("jdbc")
+    .option("driver", driver)
+    .option("url", url)
+    .option("user", user)
+    .option("password", password)
+    .option("dbtable", "public.employees")
+    .load()
+
+  employeesDF.show()
+
+  /*
+  * Exercise: read the movies DF, then write it as
+  * - tab-separated values file
+  * - snappy Parquet
+  * - table "public.movies" in the Postgres DB
+   */
+
+  val moviesDF = spark.read.json("src/main/resources/data/movies.json")
+
+  //TSV
+  moviesDF.write
+    .format("csv")
+    .option("header", "true")
+    .option("sep", "\t")
+    .save("src/main/resources/data/movies.csv")
+
+  //Parquet
+  moviesDF.write.save("src/main/resources/data/movies.parquet")
+
+  //save to DF
+  moviesDF.write
+    .format("jdbc")
+    .option("driver", driver)
+    .option("url", url)
+    .option("user", user)
+    .option("password", password)
+    .option("dbtable", "public.movies")
+    .save()
 }
